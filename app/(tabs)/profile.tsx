@@ -1,12 +1,16 @@
+import { icons } from '@/constants/icons';
 import * as React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
 
-interface ProfileProps {}
+interface ProfileProps { }
 
 const Profile = (props: ProfileProps) => {
   return (
-    <View style={styles.container}>
-      <Text>Profile</Text>
+    <View className='bg-primary flex-1 px-10'>
+      <View className='flex justify-center items-center flex-1 flex-col gap-5'>
+        <Image source={icons.person} className="size-10" tintColor="#Fff" />
+        <Text className='text-gray-500 text-base'>Profile</Text>
+      </View>
     </View>
   );
 };
